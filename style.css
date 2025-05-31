@@ -6,6 +6,7 @@
     box-sizing: border-box;
     outline: none;
     text-decoration: none;
+    touch-action: manipulation;
 }
 
 body{
@@ -23,6 +24,10 @@ body{
     overflow-x: scroll;
 
     align-items: center;
+}
+
+img{
+    user-select: none;
 }
 
 .coluna{
