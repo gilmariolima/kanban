@@ -12,120 +12,93 @@
         <div class="coluna pendente">
             <div class="titulo-coluna">
                 <h2>Pendente</h2>
-                <button><i class="fa-solid fa-plus"></i></button>
-            </div>
+                <button class="btn-add" nome-coluna="pendente"><i class="fa-solid fa-plus"></i></button>
+            </div> 
 
-            <div class="card" draggable="true">
-                <div class="prioridade alta">Alta prioridade</div>
-                <p>Revisar documento do projeto</p>
-                <footer class="footer-card">
-                    <div class="icones">
-                        <i class="fa-regular fa-comment"><span>2</span></i>
-                        <i class="fa-solid fa-paperclip"><span>1</span></i>
-                    </div>
-                    <img class="img-card" src="img/persona.png" alt="persona">
-                </footer>
-            </div>
+            <ul class="lista-cards" id="pendente">
 
-            <div class="card" draggable="true">
-                <div class="prioridade baixa">Baixa prioridade</div>
-                <p>Revisar documento do projeto</p>
-                <footer class="footer-card">
-                    <div class="icones">
-                        <i class="fa-regular fa-comment"><span>2</span></i>
-                        <i class="fa-solid fa-paperclip"><span>1</span></i>
-                    </div>
-                    <img class="img-card" src="img/persona.png" alt="persona">
-                </footer>
-            </div>
-
-            <div class="card" draggable="true">
-                <div class="prioridade media">Media prioridade</div>
-                <p>Revisar documento do projeto</p>
-                <footer class="footer-card">
-                    <div class="icones">
-                        <i class="fa-regular fa-comment"><span>2</span></i>
-                        <i class="fa-solid fa-paperclip"><span>1</span></i>
-                    </div>
-                    <img class="img-card" src="img/persona.png" alt="persona">
-                </footer>
-            </div>
+            </ul>
         </div>
-
 
         <div class="coluna front-end">
             <div class="titulo-coluna">
                 <h2>Em front-end</h2>
-                <button><i class="fa-solid fa-plus"></i></button>
+                <button class="btn-add" nome-coluna="front"><i class="fa-solid fa-plus"></i></button>
             </div>
 
-            <div class="card" draggable="true">
-                <div class="prioridade alta">Alta prioridade</div>
-                <p>Revisar documento do projeto</p>
-                <footer class="footer-card">
-                    <div class="icones">
-                        <i class="fa-regular fa-comment"><span>2</span></i>
-                        <i class="fa-solid fa-paperclip"><span>1</span></i>
-                    </div>
-                    <img class="img-card" src="img/persona.png" alt="persona">
-                </footer>
-            </div>
-
-          
+            <ul class="lista-cards" id="front">
+    
+            </ul>
         </div>
 
 
         <div class="coluna back-end">
             <div class="titulo-coluna">
                 <h2>Em back-end</h2>
-                <button><i class="fa-solid fa-plus"></i></button>
+                <button class="btn-add" nome-coluna="back"><i class="fa-solid fa-plus"></i></button>
             </div>
-            
-            <div class="card" draggable="true">
-                <div class="prioridade media">Media prioridade</div>
-                <p>Revisar documento do projeto</p>
-                <footer class="footer-card">
-                    <div class="icones">
-                        <i class="fa-regular fa-comment"><span>2</span></i>
-                        <i class="fa-solid fa-paperclip"><span>1</span></i>
-                    </div>
-                    <img class="img-card" src="img/persona.png" alt="persona">
-                </footer>
-            </div>
+
+            <ul class="lista-cards" id="back">
+
+            </ul>
         </div>
 
 
         <div class="coluna teste">
             <div class="titulo-coluna">
                 <h2>Em testes</h2>
-                <button><i class="fa-solid fa-plus"></i></button>
+                <button class="btn-add" nome-coluna="teste"><i class="fa-solid fa-plus"></i></button>
             </div>
 
+            <ul class="lista-cards" id="teste">
 
-
-            <div class="card" draggable="true">
-                <div class="prioridade media">Media prioridade</div>
-                <p>Revisar documento do projeto</p>
-                <footer class="footer-card">
-                    <div class="icones">
-                        <i class="fa-regular fa-comment"><span>2</span></i>
-                        <i class="fa-solid fa-paperclip"><span>1</span></i>
-                    </div>
-                    <img class="img-card" src="img/persona.png" alt="persona">
-                </footer>
-            </div>
+            </ul>
         </div>
 
 
         <div class="coluna entregue">
             <div class="titulo-coluna">
                 <h2>Entregues</h2>
-                <button><i class="fa-solid fa-plus"></i></button>
+                <button class="btn-add" nome-coluna="entregue"><i class="fa-solid fa-plus"></i></button>
             </div>
 
-        </div>
+            <ul class="lista-cards" id="entregue">
 
+            </ul>
+        </div>
     </main>
+
+    <div id="fundo">
+        <div class="modal">
+            <div class="header-modal">
+                <h2>Adicionar tarefa - Prioridade</h2>
+                <button class="fechar-modal"><i class="fa-solid fa-x"></i></button>
+            </div>
+            <div class="content-modal">
+                <div class="escolha-prioridades">
+                    <span class="escolha escolha-baixa">Baixa</span>
+                    <span class="escolha escolha-media">Media</span>
+                    <span class="escolha escolha-alta">Alta</span>
+                </div>
+                <div>
+                    <input type="text" id="tarefa" placeholder="Tarefa">
+                </div>
+
+                <div class="footer-content">
+                    <button class="fechar-modal">Cancelar</button>
+                    <button id="addTarefa">Adicionar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="idverCard">
+        <div class="modal">
+            <div class="header-modal">
+                <h2>Tarefa</h2>
+                <button class="fechar-tarefa" id="fecharTarefa"><i class="fa-solid fa-x"></i></button>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
