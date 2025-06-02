@@ -219,12 +219,20 @@ img{
     }
 }
 
+.content-modal{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
 .escolha-prioridades{
-    margin: 20px 0;
+    margin: 10px 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
+    width: 100%;
 }
 
 .escolha{
@@ -264,6 +272,7 @@ img{
 }
 
 .footer-content{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;

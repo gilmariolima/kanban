@@ -71,18 +71,20 @@
     <div id="fundo">
         <div class="modal">
             <div class="header-modal">
-                <h2>Adicionar tarefa - Prioridade</h2>
+                <h2>Adicionar tarefa</h2>
                 <button class="fechar-modal"><i class="fa-solid fa-x"></i></button>
             </div>
             <div class="content-modal">
+                <h3>Prioridade</h3>
+
                 <div class="escolha-prioridades">
                     <span class="escolha escolha-baixa">Baixa</span>
                     <span class="escolha escolha-media">Media</span>
                     <span class="escolha escolha-alta">Alta</span>
                 </div>
-                <div>
-                    <input type="text" id="tarefa" placeholder="Tarefa">
-                </div>
+                
+                <input type="text" id="tarefa" placeholder="Tarefa">
+                
 
                 <div class="footer-content">
                     <button class="fechar-modal">Cancelar</button>
@@ -94,9 +96,10 @@
     <div id="idverCard">
         <div class="modal">
             <div class="header-modal">
-                <h2>Tarefa</h2>
+                <h2>Tarefa: <span id="spanTarefa"></span></h2>
                 <button class="fechar-tarefa" id="fecharTarefa"><i class="fa-solid fa-x"></i></button>
             </div>
+            <div id="priore"></div>
         </div>
     </div>
     <script src="script.js"></script>

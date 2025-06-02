@@ -2,7 +2,9 @@ const fundo = document.getElementById("fundo");
 const addTarefa = document.getElementById("addTarefa");
 const inputTarefa = document.getElementById("tarefa");
 const idverCard = document.getElementById("idverCard");
-const fecharTarefa = document.getElementById("fecharTarefa")
+const fecharTarefa = document.getElementById("fecharTarefa");
+const spanTarefa = document.getElementById("spanTarefa");
+const priore = document.getElementById("priore")
 
 let colunaAtual = null;
 
@@ -67,8 +69,12 @@ function verCard(card){
     idverCard.style.display = "flex"
     var prioridade = card.querySelector(".prioridade")
     var conteudo = card.querySelector(".textoCard")
-    console.log(conteudo.textContent)
+    spanTarefa.innerHTML = conteudo.textContent
     console.log(prioridade.textContent)
+    priore.innerHTML = `
+    <div class="${prioridade.textContent.to}">prioridade</div>
+    `
+    
 }
 
 document.querySelectorAll(".card").forEach(card => {
@@ -78,7 +84,7 @@ document.querySelectorAll(".card").forEach(card => {
 
 //qnd clica no botao + para adicionar um nova tarefa
 addTarefa.addEventListener("click", () => {
-    if (!colunaAtual) return;//se coluna for null ou undefinied cai aqui
+    if (!colunaAtual) return;//se coluna for null ou undefined cai aqui
 
 
     const nomeTarefa = inputTarefa.value.trim();
