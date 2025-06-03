@@ -89,6 +89,7 @@ img{
 
 .lista-cards{
     height: 100%;
+
 }
 
 .card{
@@ -141,10 +142,10 @@ img{
 .pendente{
     border-top: 7px solid palevioletred;
 }
-.front-end{
+.front-end, .front{
     border-top: 7px solid orange;
 }
-.back-end{
+.back-end, .back{
      border-top: 7px solid yellow;
 }
 .teste{
@@ -155,6 +156,7 @@ img{
 }
 
 .dragging{
+    cursor: grab;
     opacity: 0.3;
 }
 
@@ -291,4 +293,8 @@ img{
 #addTarefa{
     background-color: darkgreen;
     color: #fff;
+}
+
+#priori{
+    margin-top: 10px;
 }

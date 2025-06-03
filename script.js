@@ -4,7 +4,8 @@ const inputTarefa = document.getElementById("tarefa");
 const idverCard = document.getElementById("idverCard");
 const fecharTarefa = document.getElementById("fecharTarefa");
 const spanTarefa = document.getElementById("spanTarefa");
-const priore = document.getElementById("priore")
+const priori = document.getElementById("priori")
+
 
 let colunaAtual = null;
 
@@ -65,16 +66,25 @@ function aplicarEventos(card) {
     })
 }
 
+function removerBordas(){
+    document.querySelectorAll("#modal").forEach(item=>{
+        item.classList.remove("pendente", "front","teste", "back", "entregue")
+    })
+}
+
 function verCard(card){
     idverCard.style.display = "flex"
+
     var prioridade = card.querySelector(".prioridade")
     var conteudo = card.querySelector(".textoCard")
-    spanTarefa.innerHTML = conteudo.textContent
-    console.log(prioridade.textContent)
-    priore.innerHTML = `
-    <div class="${prioridade.textContent.to}">prioridade</div>
-    `
-    
+    var borda = (card.closest(".lista-cards").id)
+    console.log(card.closest(".coluna"))
+
+    spanTarefa.innerHTML = `${conteudo.textContent} `
+    priori.innerHTML = `<div class="${prioridade.textContent.toLowerCase()}">${prioridade.textContent}</div>`
+
+    removerBordas()
+    const modal = document.getElementById("modal").classList.add(borda)
 }
 
 document.querySelectorAll(".card").forEach(card => {
